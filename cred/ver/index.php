@@ -1,5 +1,4 @@
 <?php
-    $Card = $_POST['card'];
     class Card{
          public function valid_card($number) {
             $number = strrev(preg_replace('/[^d]/','',$number));
