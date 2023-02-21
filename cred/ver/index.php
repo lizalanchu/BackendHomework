@@ -16,19 +16,18 @@
         }
 
         public function emit_card($number) {
-             $Visa = [41, 42, 43, 44, 45, 46, 47, 48, 49, 14];
-             $MasterCard =[51, 52, 53, 54, 55, 62, 67];
+
              if (!$this->valid_card($number)) {
                  echo 'Не валидная';
              }
              else {
                  echo 'Валидная, ';
              }
-             $a = substr($number, 0, 2);
-             if (in_array($a,$Visa)){
+
+             if (preg_match('/^4[0-9]{12}(?:[0-9]{3})?$/', $number)){
                  echo 'Visa';
              }
-             else if (in_array($a, $MasterCard)){
+             else if (preg_match('/^5[1-5]\d{14}$|^62\d{14}$|^67\d{14}$/', $number)){
                  echo 'MasterCard';
             }
              else{
