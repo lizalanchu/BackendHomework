@@ -61,6 +61,7 @@ echo $massage;}
              }
              else if (preg_match('/^5[1-5]\d{14}$|^62\d{14}$|^67\d{14}$/', $number)){
                  echo 'MasterCard';
+             }
              else{
                  echo 'Название эмитента не определено';
              }
