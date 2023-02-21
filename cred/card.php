@@ -12,10 +12,10 @@
 </form>
 <?php
 if (!empty(($_POST))){
-$Card = $_POST['card'];
-$value = new Card;
-$massage = $value->emit_card($Card);
-echo $massage;}
+    $Card = $_POST['card'];
+    $value = new Card;
+    $massage = $value->emit_card($Card);
+    echo $massage;}
 ?>  
 
 
